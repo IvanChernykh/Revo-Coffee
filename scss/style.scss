@@ -40,15 +40,20 @@ button {
   font-family: "Montserrat";
   text-transform: uppercase;
 }
+.bg-block {
+  z-index: -5;
+  position: absolute;
+  top: 0;
+  height: 100%;
+}
 //header
 .header__left,
 .header__center,
 .header__right {
-  width: 100%;
   padding-top: 75px;
 }
 .header__left {
-  max-width: 386px;
+  width: 30%;
   padding-left: 126px;
   position: relative;
 }
@@ -70,6 +75,7 @@ button {
   background: url(../img/header-bg.webp) no-repeat center center;
   background-size: cover;
   padding: 0;
+  width: 100%;
   @include flexCenter;
 }
 .header__circle {
@@ -92,7 +98,8 @@ button {
 }
 .header__right {
   background-color: $primaryColor;
-  max-width: 324px;
+  width: 50%;
+  max-width: 326px;
   padding-left: 55px;
   padding-bottom: 250px;
 }
@@ -148,13 +155,9 @@ button {
   position: relative;
 }
 .coffee__bg {
-  position: absolute;
   left: 0;
-  top: 0;
   background-color: $primaryColor;
-  width: 384px;
-  height: 100%;
-  z-index: -5;
+  width: 25%;
 }
 .coffee__title {
   margin-bottom: 72px;
@@ -205,13 +208,8 @@ button {
   position: relative;
 }
 .giftset__bg {
-  position: absolute;
   left: 0;
-  top: 0;
-  z-index: -5;
-  width: 100%;
-  max-width: 1070px;
-  height: 100%;
+  width: 75%;
   background-color: $lightGray;
 }
 .giftset__title {
@@ -280,4 +278,74 @@ button {
 }
 .giftset__slider-btn.active {
   background-color: #fff;
+}
+//combo
+.combo {
+  position: relative;
+  overflow: hidden;
+  @include paddingsTB(88px, 128px);
+}
+.combo__bg {
+  right: 0;
+  width: 25%;
+  background-color: $primaryColor;
+}
+.combo__title {
+  margin-bottom: 64px;
+}
+.combo__slides {
+  display: flex;
+}
+.combo__slide {
+  background-color: #fff;
+  min-width: 360px;
+  margin-right: 30px;
+}
+.combo__img {
+  @include widthHeight(100%, 300px);
+  margin-bottom: 42px;
+  img {
+    @include widthHeight(100%);
+    object-fit: cover;
+  }
+}
+.combo__inner {
+  padding: 0 42px 42px;
+}
+.combo__price {
+  @include fontProps(2rem, 600, $accentGold);
+  margin-right: 12px;
+}
+.combo__discount {
+  @include fontProps(1.4rem, 300, $primaryColor);
+  font-style: italic;
+  text-decoration: line-through;
+}
+.combo__h3 {
+  @include fontProps(2.4rem, 700, $darkGray);
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+.combo__text {
+  line-height: 137%;
+  margin-bottom: 32px;
+}
+.combo__btn {
+  @include fontProps(1.6rem, 700, #fff);
+  @include button(134px, 32px, $accentGold);
+  border-radius: 16px;
+  text-decoration: none;
+  &:hover {
+    background-color: darken($accentGold, 5);
+  }
+}
+//footer
+.footer {
+  background-color: #edf0f5;
+  padding: 20px 0;
+}
+.footer__copyright {
+  @include fontProps(1.6rem, 300, $primaryColor);
+  font-style: italic;
+  text-align: center;
 }
