@@ -105,7 +105,7 @@ button {
 }
 .header__cart {
   margin-bottom: 118px;
-  display: block;
+  display: inline-block;
 }
 .nav__title {
   @include fontProps(1.6rem, 700, $lightGray);
