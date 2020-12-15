@@ -54,11 +54,11 @@ button {
 }
 .header__left {
   width: 30%;
-  padding-left: 126px;
   position: relative;
 }
 .header__logo {
   margin: 0 auto;
+  display: block;
 }
 .header__title {
   @include fontProps(5.4rem, 800, $primaryColor);
