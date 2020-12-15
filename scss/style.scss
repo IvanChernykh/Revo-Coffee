@@ -1,4 +1,4 @@
-@import "mixins, variables";
+@import "mixins", "variables";
 
 //general
 html {
@@ -8,6 +8,7 @@ html {
   box-sizing: border-box;
 }
 body {
+  background-color: #f9fbff;
   font-family: "Nunito", sans-serif;
 }
 h1,
@@ -17,4 +18,91 @@ h4,
 p {
   margin: 0;
   padding: 0;
+}
+.suptitle {
+  @include fontProps(2rem, 600, $primaryColor);
+  margin-bottom: 5px;
+}
+.section__title {
+  @include fontProps(3rem, 800, $primaryColor);
+  font-family: "Montserrat";
+}
+//header
+.header__left,
+.header__center,
+.header__right {
+  width: 100%;
+  padding-top: 75px;
+}
+.header__left {
+  max-width: 386px;
+  padding-left: 126px;
+  position: relative;
+}
+.header__logo {
+  margin: 0 auto;
+}
+.header__title {
+  @include fontProps(5.4rem, 800, $primaryColor);
+  font-family: "Montserrat";
+  position: absolute;
+  bottom: 64px;
+  left: 130px;
+  span {
+    color: #f9fbff;
+    background-color: $accentGold;
+  }
+}
+.header__center {
+  background: url(../img/header-bg.webp) no-repeat center center;
+  background-size: cover;
+  padding: 0;
+  @include flexCenter;
+}
+.header__circle {
+  @include widthHeight(54px);
+  border-radius: 50%;
+  background-color: $lightGray;
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    border: 10px solid transparent;
+    border-left: 10px solid $accentGold;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-15%, -50%, 0);
+  }
+}
+.header__right {
+  background-color: $primaryColor;
+  max-width: 324px;
+  padding-left: 55px;
+  padding-bottom: 250px;
+}
+.header__cart {
+  margin-bottom: 118px;
+  display: block;
+}
+.nav__title {
+  @include fontProps(1.6rem, 700, $lightGray);
+  margin-bottom: 30px;
+}
+.nav__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.nav__link {
+  margin-bottom: 25px;
+  a {
+    @include fontProps(1.6rem, 300, $lightGray);
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
