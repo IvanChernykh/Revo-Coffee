@@ -199,3 +199,85 @@ button {
     background-color: darken($accentGold, 5);
   }
 }
+//giftset
+.giftset {
+  @include paddingsTB(86px, 125px);
+  position: relative;
+}
+.giftset__bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -5;
+  width: 100%;
+  max-width: 1070px;
+  height: 100%;
+  background-color: $lightGray;
+}
+.giftset__title {
+  margin-bottom: 68px;
+}
+.giftset__slider {
+  background-color: #fff;
+  padding: 0;
+}
+.giftset__content {
+  border-right: 1px solid #edf0f5;
+}
+.giftset__item {
+  padding: 64px 64px 64px 290px;
+  position: relative;
+}
+.giftset__img {
+  position: absolute;
+  top: 60px;
+  left: 200px;
+  transform: translateX(-100%);
+}
+.giftset__price {
+  @include fontProps(2rem, 600, $accentGold);
+}
+.giftset__h3 {
+  @include fontProps(2.4rem, 700, $darkGray);
+  @include marginTB(12px);
+}
+.giftset__text {
+  font-weight: 300;
+  margin-bottom: 24px;
+  line-height: 137%;
+}
+.giftset__about {
+  margin-bottom: 45px;
+}
+.giftset__about-img {
+  margin-right: 10px;
+}
+.giftset__btn {
+  @include button(166px, 38px, $accentGold);
+  @include fontProps(1.6rem, 700, $lightGray);
+  border-radius: 19px;
+  text-decoration: none;
+  &:hover {
+    background-color: darken($accentGold, 5);
+  }
+}
+.giftset__buttons {
+  display: flex;
+  flex-direction: column;
+}
+.giftset__slider-btn {
+  @include noBorder;
+  @include fontProps(3rem, 800, $primaryColor);
+  @include paddingsLR(33px);
+  font-family: "Montserrat";
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background: #edf0f5;
+  &:hover {
+    background-color: #fff;
+  }
+}
+.giftset__slider-btn.active {
+  background-color: #fff;
+}
