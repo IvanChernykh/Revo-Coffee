@@ -19,13 +19,21 @@ p {
   margin: 0;
   padding: 0;
 }
+.suptitle,
+.section__title {
+  text-align: center;
+  color: $primaryColor;
+}
 .suptitle {
-  @include fontProps(2rem, 600, $primaryColor);
+  font-size: 2rem;
+  font-weight: 600;
   margin-bottom: 5px;
 }
 .section__title {
-  @include fontProps(3rem, 800, $primaryColor);
+  font-size: 3rem;
+  font-weight: 800;
   font-family: "Montserrat";
+  text-transform: uppercase;
 }
 //header
 .header__left,
@@ -105,4 +113,22 @@ p {
       text-decoration: underline;
     }
   }
+}
+//features
+.features {
+  @include paddingsTB(87px, 100px);
+}
+.features__item {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.features__img {
+  height: 135px;
+  @include flexCenter;
+}
+.features__h3 {
+  @include fontProps(2.4rem, 700, $darkGray);
+}
+.features__text {
+  @include fontProps(1.6rem, 300, $darkGray);
 }
