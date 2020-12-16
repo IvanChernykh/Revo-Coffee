@@ -3,7 +3,7 @@
 function Slider(btn, slide) {
     let buttons = document.querySelectorAll(btn);
     let slides = document.querySelectorAll(slide);
-    let stepSize = slides[0].firstElementChild.clientWidth;
+    let stepSize = slides[0].firstElementChild.clientWidth + 30;
     let step = 0;
 
     function getStep() {
