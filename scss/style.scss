@@ -3,6 +3,7 @@
 //general
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 * {
   box-sizing: border-box;
@@ -280,8 +281,12 @@ button {
   border-right: 1px solid #edf0f5;
 }
 .giftset__item {
-  padding: 64px 64px 64px 290px;
+  padding: 64px 30px 64px 290px;
   position: relative;
+  display: none;
+}
+.giftset__item.active {
+  display: block;
 }
 .giftset__img {
   position: absolute;
@@ -300,6 +305,7 @@ button {
   font-weight: 300;
   margin-bottom: 24px;
   line-height: 137%;
+  height: 110px;
 }
 .giftset__about {
   margin-bottom: 45px;
@@ -331,6 +337,9 @@ button {
   background: #edf0f5;
   &:hover {
     background-color: #fff;
+  }
+  &:not(:first-child) {
+    border-top: 1px solid #edf0f5;
   }
 }
 .giftset__slider-btn.active {

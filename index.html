@@ -36,18 +36,17 @@
           <nav class="nav">
             <h2 class="nav__title">TRANG CHỦ</h2>
             <ul class="nav__list">
-              <li class="nav__link"><a href="#">COFFEE</a></li>
-              <li class="nav__link"><a href="#">PHIN MẠ MÀU</a></li>
-              <li class="nav__link"><a href="#">GIFTSET</a></li>
-              <li class="nav__link"><a href="#">COMBO PHIN PHÊ</a></li>
-              <li class="nav__link"><a href="#">LIÊN HỆ</a></li>
+              <li class="nav__link nav__features"><a href="#features">COFFEE</a></li>
+              <li class="nav__link nav__coffee"><a href="#coffee">CHUẨN GU ĐÚNG VỊ</a></li>
+              <li class="nav__link nav__giftset"><a href="#giftset">GIFTSET</a></li>
+              <li class="nav__link nav__combo"><a href="#combo">COMBO PHIN PHÊ</a></li>
             </ul>
           </nav>
         </div>
       </div>
     </header>
     <!-- features -->
-    <section class="features">
+    <section class="features" id="features">
       <div class="container">
         <p class="suptitle">Your Personalized Coffee</p>
         <h2 class="section__title features__title">COFFEE BUILD YOUR BASE</h2>
@@ -92,7 +91,7 @@
       </div>
     </section>
     <!-- coffee -->
-    <section class="coffee">
+    <section class="coffee" id="coffee">
       <div class="coffee__bg bg-block"></div>
       <div class="container">
         <p class="suptitle">Choose Your Favorite</p>
@@ -189,7 +188,7 @@
       </div>
     </section>
     <!-- giftset -->
-    <section class="giftset">
+    <section class="giftset" id="giftset">
       <div class="giftset__bg bg-block"></div>
       <div class="container">
         <p class="suptitle">Best Gift For Best Friend</p>
@@ -198,7 +197,7 @@
           <div class="col-md-9 giftset__slider d-flex">
             <div class="giftset__content">
               <!-- item 1 -->
-              <div class="giftset__item">
+              <div class="giftset__item active">
                 <img src="img\giftset\coffee.png" alt="" class="giftset__img" />
                 <span class="giftset__price">285.000</span>
                 <h3 class="giftset__h3">Giftset "Cà phê phin Việt Nam"</h3>
@@ -228,7 +227,65 @@
                 <a href="#" class="giftset__btn">MUA NGAY</a>
               </div>
               <!-- item 2 -->
+              <div class="giftset__item">
+                <img src="img\giftset\coffee.png" alt="" class="giftset__img" />
+                <span class="giftset__price">385.000</span>
+                <h3 class="giftset__h3">Giftset " Các loại hạt Chất"</h3>
+                <p class="giftset__text">
+                  Những hạt cà phê Arabica, Robusta đạt chất lượng theo tiêu chuẩn quốc tế. Chất
+                  lượng Từng một hạt cà phê là cả một quá trình tập trung cao độ của nghệ nhân cà
+                  phê. Chất lượnnguồn gốc và chất lượng green bean. Pha chế Những hạt cà phê được
+                  lột xác qua quá trình rang xay kỹ lưỡng và nghiêm ngặt.
+                </p>
+                <!-- giftset__about -->
+                <div class="giftset__about d-flex justify-content-between">
+                  <div class="giftset__about-item d-flex align-items-center">
+                    <img src="img/giftset/coffee-beans.svg" alt="" class="giftset__about-img" />
+                    <div class="giftset__about-text">
+                      <p>Pha chế</p>
+                      <h4>Fine Robusta Blend</h4>
+                    </div>
+                  </div>
+                  <div class="about__item d-flex align-items-center">
+                    <img src="img/giftset/mountain.svg" alt="" class="giftset__about-img" />
+                    <div class="giftset__about_text">
+                      <p>Loại hạt</p>
+                      <h4>Fine Robusta Blend</h4>
+                    </div>
+                  </div>
+                </div>
+                <a href="#" class="giftset__btn">MUA NGAY</a>
+              </div>
               <!-- item 3 -->
+              <div class="giftset__item">
+                <img src="img\giftset\coffee.png" alt="" class="giftset__img" />
+                <span class="giftset__price">485.000</span>
+                <h3 class="giftset__h3">Giftset " Đậm Đàin Việt Nam"</h3>
+                <p class="giftset__text">
+                  Hàm lượng caffein trong Revo Đậm Đà đủ mạnh để làm bạn tỉnh táo làm việc. Revo
+                  Everyday được phối trộn giữa vị đắng của hạt Robusta và hương thơm. là dòng cà phê
+                  đặc biệt của Revo Coffee dành riêng
+                </p>
+                <!-- giftset__about -->
+                <div class="giftset__about d-flex justify-content-between">
+                  <div class="giftset__about-item d-flex align-items-center">
+                    <img src="img/giftset/coffee-beans.svg" alt="" class="giftset__about-img" />
+                    <div class="giftset__about-text">
+                      <p>Loại hạt</p>
+                      <h4>Fine Robusta Blend</h4>
+                    </div>
+                  </div>
+                  <div class="about__item d-flex align-items-center">
+                    <img src="img/giftset/mountain.svg" alt="" class="giftset__about-img" />
+                    <div class="giftset__about_text">
+                      <p>Loại hạt</p>
+                      <h4>Các loại hạt</h4>
+                    </div>
+                  </div>
+                </div>
+                <a href="#" class="giftset__btn">MUA NGAY</a>
+              </div>
+              <!-- GiFtSeT items end -->
             </div>
             <div class="giftset__buttons">
               <button class="giftset__slider-btn active">1</button>
@@ -240,7 +297,7 @@
       </div>
     </section>
     <!-- combo -->
-    <section class="combo">
+    <section class="combo" id="combo">
       <div class="combo__bg bg-block"></div>
       <div class="container">
         <p class="suptitle">Your Personalized Coffee</p>

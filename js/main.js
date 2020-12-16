@@ -34,3 +34,22 @@ function Slider(btn, slide) {
 }
 Slider('.coffee__slider-btn', '.coffee__row');
 Slider('.combo__slider-btn', '.combo__slides');
+function giftsetSlides() {
+    let slides = document.querySelectorAll('.giftset__item');
+    let buttons = document.querySelectorAll('.giftset__slider-btn');
+    function removeClass(elems) {
+        for (let elem of elems) {
+            elem.classList.remove('active');
+        }
+    }
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', function () {
+            removeClass(slides);
+            removeClass(buttons);
+            buttons[i].classList.add('active');
+            slides[i].classList.add('active');
+        })
+
+    }
+}
+giftsetSlides();
