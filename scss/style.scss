@@ -46,7 +46,36 @@ button {
   top: 0;
   height: 100%;
 }
-//header
+//slider buttons-------------------
+.coffee__slider-btn,
+.combo__slider-btn {
+  z-index: 5;
+  @include widthHeight(48px);
+  position: absolute;
+  @include noBorder;
+  border-radius: 50%;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 700;
+  background-color: $accentGold;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  display: none;
+}
+.coffee__slider-btn.active,
+.combo__slider-btn.active {
+  display: block;
+}
+.coffee__prev-btn,
+.combo__prev-btn {
+  left: -20px;
+}
+.coffee__next-btn,
+.combo__next-btn {
+  right: -20px;
+}
+//header----------------------
 .header__left,
 .header__center,
 .header__right {
@@ -159,12 +188,40 @@ button {
   background-color: $primaryColor;
   width: 25%;
 }
+.coffee__slides {
+  position: relative;
+}
+.coffee__slider-btn {
+  z-index: 5;
+  @include widthHeight(48px);
+  position: absolute;
+  @include noBorder;
+  border-radius: 50%;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 700;
+  background-color: $accentGold;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  display: none;
+}
+.coffee__slider-btn.active {
+  display: block;
+}
+.coffee__prev-btn {
+  left: -20px;
+}
+.coffee__next-btn {
+  right: -20px;
+}
 .coffee__title {
   margin-bottom: 72px;
 }
 .coffee__row {
   display: flex;
   margin-bottom: 30px;
+  transition: 0.5s transform;
 }
 .coffee__slide:not(:last-child) {
   margin-right: 30px;
@@ -293,8 +350,12 @@ button {
 .combo__title {
   margin-bottom: 64px;
 }
+.combo__slider {
+  position: relative;
+}
 .combo__slides {
   display: flex;
+  transition: 0.5s transform;
 }
 .combo__slide {
   background-color: #fff;

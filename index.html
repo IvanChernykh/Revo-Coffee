@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/bootstrap-grid.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
   </head>
   <body>
     <!-- header -->
@@ -45,7 +46,7 @@
         </div>
       </div>
     </header>
-    <!-- intro -->
+    <!-- features -->
     <section class="features">
       <div class="container">
         <p class="suptitle">Your Personalized Coffee</p>
@@ -98,6 +99,8 @@
         <h2 class="section__title coffee__title">CHUẨN GU ĐÚNG VỊ</h2>
         <div class="coffee__slider">
           <div class="coffee__slides">
+            <button class="coffee__slider-btn coffee__prev-btn">&#8592;</button>
+            <button class="coffee__slider-btn coffee__next-btn active">&#8594;</button>
             <!-- coffee row -->
             <div class="coffee__row">
               <div class="coffee__slide d-flex">
@@ -133,9 +136,20 @@
                   <button class="coffee__btn">MUA NGAY</button>
                 </div>
               </div>
+              <div class="coffee__slide d-flex">
+                <div class="coffee__img">
+                  <img src="img/coffee/IMAGE-2.webp" alt="" />
+                </div>
+                <div class="coffee__content">
+                  <span class="coffee__price">195.000</span>
+                  <h3 class="coffee__name">REVO Honey</h3>
+                  <p class="coffee__text">độ ngọt cao, hậu ngọt, chua họ táo</p>
+                  <button class="coffee__btn">MUA NGAY</button>
+                </div>
+              </div>
             </div>
             <!-- coffee row -->
-            <div class="coffee__row">
+            <div class="coffee__row" style="margin-bottom: 0">
               <div class="coffee__slide d-flex">
                 <div class="coffee__img">
                   <img src="img/coffee/IMAGE-2.webp" alt="" />
@@ -232,6 +246,8 @@
         <p class="suptitle">Your Personalized Coffee</p>
         <h2 class="section__title combo__title">COMBO PHIN PHÊ</h2>
         <div class="combo__slider">
+          <button class="combo__slider-btn combo__prev-btn">&#8592;</button>
+          <button class="combo__slider-btn combo__next-btn active">&#8594;</button>
           <div class="combo__slides">
             <!-- combo__slide -->
             <div class="combo__slide">
@@ -312,6 +328,4 @@
   </body>
 </html>
 
-<!-- total time: 2h 35m -->
-<!-- start at 17.25 -->
-<!-- l 27 r 23 -->
+<!-- total time: 3h 30m -->
