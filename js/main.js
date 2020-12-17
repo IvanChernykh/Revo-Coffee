@@ -5,16 +5,11 @@ function Slider(btn, slide) {
     let slides = document.querySelectorAll(slide);
     let stepSize = slides[0].firstElementChild.clientWidth + 30;
     let step = 0;
-
     function getStep() {
         for (let elem of slides) elem.style.transform = `translateX(${-stepSize * step}px)`;
     }
-    function removeClass(n) {
-        buttons[n].classList.remove('active');
-    }
-    function addClass(n) {
-        buttons[n].classList.add('active');
-    }
+    let removeClass = (n) => buttons[n].classList.remove('active');
+    let addClass = (n) => buttons[n].classList.add('active');
     buttons[1].addEventListener('click', function () {
         if (step >= slides[0].children.length - 2) removeClass(1);
         step++;
@@ -44,7 +39,6 @@ function giftsetSlides() {
             buttons[i].classList.add('active');
             slides[i].classList.add('active');
         })
-
     }
 }
 giftsetSlides();
