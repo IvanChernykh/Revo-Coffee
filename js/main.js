@@ -15,7 +15,6 @@ function Slider(btn, slide) {
         step++;
         getStep();
         if (step >= 1) addClass(0);
-        console.log(stepSize);
     })
     buttons[0].addEventListener('click', function () {
         step--;
